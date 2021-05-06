@@ -1,0 +1,29 @@
+{
+  "name": "teamProfGenHW",
+  "version": "1.0.0",
+  "description": "## Your Task",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib",
+    "tests": "test"
+  },
+  "scripts": {
+    "tests": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kthendavid04/ProfileGenerator-BC.git"
+  },
+  "keywords": [],
+  "author": "Katie Seeburger",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kthendavid04/ProfileGenerator-BC/issues"
+  },
+  "homepage": "https://github.com/kthendavid04/ProfileGenerator-BC#readme",
+  "dependencies": {
+    "hosted-git-info": "^4.0.2",
+    "inquirer": "^8.0.0",
+    "jest": "^26.6.3"
+  }
+}
