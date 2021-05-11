@@ -1,10 +1,4 @@
-
-const inquirer = require("inquirer");
-const fs = require("fs");
-
-//Toster Template
-const generateHTML = (answers) =>
-`<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -21,10 +15,10 @@ const generateHTML = (answers) =>
             <div class="card-content white-text">
               <span class="card-title">Team Manager</span>
                     <ul>
-                        <li>managers name ${answers.manName}</li>
-                        <li>managers employee id${answers.manId}</li>
-                        <li>managers e-mail Address${answers.manEmail}</li>
-                        <li>managers office number${answers.manNumber}</li>
+                        <li>managers name scott</li>
+                        <li>managers employee id12234</li>
+                        <li>managers e-mail Addressscott@email.com</li>
+                        <li>managers office number123 432 1234</li>
                     </ul>>
             </div>
             <div class="card-action">
@@ -71,34 +65,4 @@ const generateHTML = (answers) =>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
 </body>
-</html>`
-
-//questions
-
-inquirer
-    .prompt([
-    {
-        name: "manName",
-        message: "What is the mnager's name?"
-    },
-    {
-        name: "manId",
-        message: "What is the mnager's ID?"
-    },
-
-    {
-        name: "manEmail",
-        message: "What is the mnager's email address?"
-    },
-    {
-        name: "manNumber",
-        message: "What is the mnager's office number?"
-    }
-    ])
-
-.then(answers => {
-        const HTMLcontent = generateHTML(answers);
-    
-        fs.writeFile('index.html', HTMLcontent, (err) =>
-        err ? console.log(err) : console.log ('Successfully created Team Roster!'));[];
-    });
+</html>
