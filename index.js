@@ -16,83 +16,130 @@ const generateHTML = (answers) =>
 </head>
 <body>
     <div class="row">
-        <div class="col s12 m6">
+    <div class="col s6 m3">
+          <div class="card blue-grey darken-1">
+            <div class="card-content white-text">
+              <span class="card-title">Employee</span>
+                    <ul>
+                        <li>Name: ${answers.empName}</li>
+                        <li>Employee ID: ${answers.empId}</li>
+                        <li><a href="mailto:"><i class="material-icons">mail</i></a>${answers.empEmail}</li>
+                    </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col s6 m3">
           <div class="card blue-grey darken-1">
             <div class="card-content white-text">
               <span class="card-title">Team Manager</span>
                     <ul>
-                        <li>managers name ${answers.manName}</li>
-                        <li>managers employee id${answers.manId}</li>
-                        <li>managers e-mail Address${answers.manEmail}</li>
-                        <li>managers office number${answers.manNumber}</li>
-                    </ul>>
-            </div>
-            <div class="card-action">
-              <a href="#">This is a link</a>
-              <a href="#">This is a link</a>
+                        <li>Manager: ${answers.manName}</li>
+                        <li>Employee ID: ${answers.manId}</li>
+                        <li><a href="mailto:"><i class="material-icons">mail</i></a>${answers.manEmail}</li>
+                        <li>Office Number: ${answers.manNumber}</li>
+                    </ul>
             </div>
           </div>
         </div>
-        <div class="col s12 m6">
+        <div class="col s6 m3">
             <div class="card blue-grey darken-1">
               <div class="card-content white-text">
                 <span class="card-title">Engineer</span>
                       <ul>
-                          <li>engineers name</li>
-                          <li>engineers employee id</li>
-                          <li>engineers e-mail Address</li>
-                          <li>engineers git hub username</li>
-                      </ul>>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
+                          <li>Engineer: ${answers.engName}</li>
+                          <li>Employee ID: ${answers.engId}</li>
+                          <li><a href="mailto:"><i class="material-icons">mail</i></a>${answers.engEmail}</li>
+                          <li><a href="https://github.com/"><i class="fa fa-github" aria-hidden="true"></i>GitHub</a>${answers.engGitHub}</li>
+                      </ul>
               </div>
             </div>
           </div>
-          <div class="col s12 m6">
+          <div class="col s6 m3">
             <div class="card blue-grey darken-1">
               <div class="card-content white-text">
                 <span class="card-title">Intern</span>
                       <ul>
-                          <li>Interns name</li>
-                          <li>Interns employee id</li>
-                          <li>Interns e-mail Address</li>
-                          <li>Interns school name</li>
-                      </ul>>
-              </div>
-              <div class="card-action">
-                <a href="#">This is a link</a>
-                <a href="#">This is a link</a>
+                          <li>Intern: ${answers.intName}</li>
+                          <li>Employee ID: ${answers.intId}</li>
+                            <li><a href="mailto:"><i class="material-icons">mail</i></a>${answers.intEmail}</li>
+                          <li>School name: ${answers.intSchool}</li>
+                      </ul>
               </div>
             </div>
           </div>
       </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://kit.fontawesome.com/0bddabc40e.js" crossorigin="anonymous"></script>    
 </body>
 </html>`
 
 //questions
-
 inquirer
     .prompt([
     {
+        name: "empName",
+        message: "What is the employee name?"
+    },
+    {
+        name: "empId",
+        message: "What is the employee ID?"
+    },
+
+    {
+        name: "empEmail",
+        message: "What is the employee email address?"
+    },
+    {
         name: "manName",
-        message: "What is the mnager's name?"
+        message: "What is the manager's name?"
     },
     {
         name: "manId",
-        message: "What is the mnager's ID?"
+        message: "What is the manager's ID?"
     },
 
     {
         name: "manEmail",
-        message: "What is the mnager's email address?"
+        message: "What is the manager's email address?"
     },
     {
         name: "manNumber",
-        message: "What is the mnager's office number?"
+        message: "What is the manager's office number?"
+    },
+    {
+        name: "engName",
+        message: "What is the engineers name?"
+    },
+    {
+        name: "engId",
+        message: "What is the engineers ID?"
+    },
+
+    {
+        name: "engEmail",
+        message: "What is the engineers email address?"
+    },
+    {
+        name: "engGitHub",
+        message: "What is the engineers GitHub username?"
+    },
+    {
+        name: "intName",
+        message: "What is the intern's name?"
+    },
+    {
+        name: "intId",
+        message: "What is the intern's employee ID?"
+    },
+
+    {
+        name: "intEmail",
+        message: "What is the intern's email address?"
+    },
+    {
+        name: "intSchool",
+        message: "What is the intern's school name?"
     }
     ])
 
