@@ -27,17 +27,28 @@ var inquirer_array = [
 inquirer
     .prompt(inquirer_array)
     .then(answers => {
+        console.log(answers);
 
     })
     .catch(error => {
         if(errorisTtyError) {
+            console.log(error);
             
         }else {
-
+            console.log(error);
         }
     })
 
+function generateHTML(employee){
+    let list =document.createElement("UL");
 
+    let name = document.createElement("LI");
+    name.setContent = employee.getName();
+
+    let email = document.createElement("LI");
+    name.setContent = employee.getEmail();
+    let id = document.createElement("LI");
+}
 
 
 
